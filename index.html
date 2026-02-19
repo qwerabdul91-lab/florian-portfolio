@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>FlorianGarcia | Portfolio 3D</title>
+    
+    <!-- Fonts Elegan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- AUDIO ELEMENT (Optional - bisa diaktifkan nanti) -->
+    <audio id="clickSound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 3D MOVING BACKGROUND -->
+    <div class="gradient-bg"></div>
+    <div class="particles"></div>
+    <div class="glow-overlay"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">FG<span class="logo-dot">.</span></div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" data-page="home">Home</a>
+                <a href="#about" class="nav-link" data-page="about">Tentang</a>
+                <a href="#skills" class="nav-link" data-page="skills">Skill</a>
+                <a href="#portfolio" class="nav-link" data-page="portfolio">Portfolio</a>
+                <a href="#contact" class="nav-link" data-page="contact">Kontak</a>
+                <!-- TAMBAHAN DISCORD DI NAVIGASI -->
+                <a href="#" class="nav-link" onclick="window.open('https:https://discord.gg/Uth3eVjx', '_blank')">Discord</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGES CONTAINER -->
+    <div class="pages-container">
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="container">
+                <div class="hero-3d">
+                    <div class="floating-shapes">
+                        <div class="shape shape1"></div>
+                        <div class="shape shape2"></div>
+                        <div class="shape shape3"></div>
+                    </div>
+                    <div class="hero-content">
+                        <h1 class="glitch-text" data-text="FlorianGarcia">FlorianGarcia</h1>
+                        <p class="hero-subtitle glow-blue">Web Developer & Freelancer</p>
+                        <p class="hero-desc">Menciptakan website modern, elegan, dan responsif untuk kebutuhan bisnis Anda</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-3d btn-gold" data-page="portfolio">
+                                <span>Lihat Karya</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#" class="btn-3d btn-outline" data-page="contact">
+                                <span>Hubungi Saya</span>
+                                <i class="fas fa-comment"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card glass-3d">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Project Selesai</div>
+                        </div>
+                        <div class="stat-card glass-3d">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Klien Puas</div>
+                        </div>
+                        <div class="stat-card glass-3d">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Tepat Waktu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about" class="page">
+            <div class="container">
+                <h2 class="section-title">✨ Tentang Saya ✨</h2>
+                <div class="about-content glass-3d">
+                    <div class="about-img">
+                        <div class="profile-frame">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>Halo! Saya <strong class="glow-gold">FlorianGarcia</strong>, seorang web developer pemula yang antusias dan cepat belajar. Saya memulai karir freelance dari nol.</p>
+                        <p>Saya spesialisasi dalam pembuatan:</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> Landing Page Company Profile</li>
+                            <li><i class="="fas fa-check-circle"></i> Website Portfolio</li>
+                            <li><i class="fas fa-check-circle"></i> Website UMKM / Toko Sederhana</li>
+                            <li><i class="fas fa-check-circle"></i> Jasa Data Entry & Penulisan</li>
+                        </ul>
+                        <p>Saya berkomitmen memberikan hasil terbaik dengan harga terjangkau. Setiap project saya kerjakan dengan teliti dan penuh tanggung jawab.</p>
+                        <a href="#" class="btn-3d btn-gold" data-page="contact">Mari Bekerja Sama</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS PAGE -->
+        <div id="skills" class="page">
+            <div class="container">
+                <h2 class="section-title">⚡ Skill & Kemampuan ⚡</h2>
+                <div class="skills-grid">
+                    <div class="skill-card-3d glass-3d">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML & CSS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-percent">85%</div>
+                    </div>
+                    <div class="skill-card-3d glass-3d">
+                        <div class="skill-icon">⚡</div>
+                        <h3>JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                        <div class="skill-percent">60%</div>
+                    </div>
+                    <div class="skill-card-3d glass-3d">
+                        <div class="skill-icon">📊</div>
+                        <h3>Data Entry</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                        <div class="skill-percent">95%</div>
+                    </div>
+                    <div class="skill-card-3d glass-3d">
+                        <div class="skill-icon">✍️</div>
+                        <h3>Penulisan Artikel</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                        <div class="skill-percent">80%</div>
+                    </div>
+                    <div class="skill-card-3d glass-3d">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Canva Design</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                        <div class="skill-percent">75%</div>
+                    </div>
+                    <div class="skill-card-3d glass-3d">
+                        <div class="skill-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-percent">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PORTFOLIO PAGE -->
+        <div id="portfolio" class="page">
+            <div class="container">
+                <h2 class="section-title">📁 Portfolio Karya 📁</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item glass-3d">
+                        <div class="portfolio-img">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Laundry Kilat</h3>
+                        <p>Landing page untuk bisnis laundry dengan desain modern dan fitur WA integration.</p>
+                        <div class="portfolio-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <a href="#" class="portfolio-link" onclick="window.open('https://floriangarcia.github.io/laundry-dummy', '_blank')">
+                            <i class="fas fa-external-link-alt"></i> Lihat Demo
+                        </a>
+                    </div>
+                    <div class="portfolio-item glass-3d">
+                        <div class="portfolio-img">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Portfolio Pribadi</h3>
+                        <p>Website portfolio pribadi dengan desain 3D glowy dan multi halaman.</p>
+                        <div class="portfolio-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <a href="#" class="portfolio-link">
+                            <i class="fas fa-external-link-alt"></i> Lihat Demo
+                        </a>
+                    </div>
+                    <div class="portfolio-item glass-3d coming-soon">
+                        <div class="portfolio-img">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>Project selanjutnya sedang dalam pengerjaan</p>
+                        <div class="portfolio-tags">
+                            <span>?</span>
+                            <span>?</span>
+                            <span>?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE (DENGAN DISCORD) -->
+        <div id="contact" class="page">
+            <div class="container">
+                <h2 class="section-title">📞 Hubungi Saya 📞</h2>
+                <div class="contact-container">
+                    <!-- WhatsApp Order -->
+                    <div class="contact-info-3d glass-3d">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Order</h3>
+                        <p class="contact-number">0881 0238 8227 5</p>
+                        <a href="https://wa.me/62881023882275?text=Halo%20FlorianGarcia%2C%20saya%20tertarik%20dengan%20jasa%20website%20Anda" class="btn-3d btn-wa" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat Order
+                        </a>
+                    </div>
+
+                    <!-- WhatsApp Konsultasi -->
+                    <div class="contact-info-3d glass-3d">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Konsultasi</h3>
+                        <p class="contact-number">0888 0238 1763 87</p>
+                        <a href="https://wa.me/62888023881763?text=Halo%20FlorianGarcia%2C%20saya%20mau%20konsultasi%20website" class="btn-3d btn-chat" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat Konsultasi
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-info-3d glass-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p class="contact-number">qwerabdul91@gmail.com</p>
+                        <a href="mailto:qwerabdul91@gmail.com" class="btn-3d btn-email">
+                            <i class="fas fa-envelope"></i> Kirim Email
+                        </a>
+                    </div>
+
+                    <!-- Projects.co.id -->
+                    <div class="contact-info-3d glass-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Projects.co.id</h3>
+                        <p class="contact-number">FlorianGarcia</p>
+                        <a href="https://projects.co.id/public/floriangarcia" class="btn-3d btn-profile" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Lihat Profil
+                        </a>
+                    </div>
+
+                    <!-- DISCORD CARD -->
+                    <div class="contact-info-3d glass-3d">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>Discord Server</h3>
+                        <p class="contact-number">floriangarcia</p>
+                        <a href="https://discord.gg/Uth3eVjx" class="btn-3d btn-discord" target="_blank">
+                            <i class="fab fa-discord"></i> Join Discord
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.7;">Username: floriangarcia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="glass-footer">
+        <div class="container">
+            <p>© 2026 FlorianGarcia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
